@@ -218,3 +218,9 @@ ao_lado(X,Y,sala(_,_,_,X,Y)).
 ao_lado(X,Y,sala(_,_,_,Y,X)).
 
 segunda_posicao(X,sala(_,X,_,_,_)).
+
+/*
+?- resolve(S).
+S = sala(estudante(branca, bruna, eua, nove_meses, seis, vinte_sete), estudante(azul, luiza, irlanda, um_ano, doze, vinte_um), estudante(verde, talita, australia, dezoito_meses, vinte_quatro, vinte_quatro), estudante(amarela, emily, canada, quinze_meses, dezoito, trinta), estudante(vermelha, fabiana, inglaterra, seis_meses, trinta, trinta_e_tres)) ;
+false.
+*/
