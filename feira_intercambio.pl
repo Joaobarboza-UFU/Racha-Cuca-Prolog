@@ -9,13 +9,13 @@ resolve(S) :-
                     estudante(_,_,_,_,_,_),
                     estudante(_,_,_,_,_,_)),
 
-# A estudante de mochila Verde está ao lado da estudante de 30 anos.
+% A estudante de mochila Verde está ao lado da estudante de 30 anos.
 
             ao_lado(C,D,E,S),
             mochila(C,verde),
             idade(D,trinta),
 
-# A dona da mochila Azul está em algum lugar entre a Bruna e a estudante de 24 anos, nessa ordem.
+% A dona da mochila Azul está em algum lugar entre a Bruna e a estudante de 24 anos, nessa ordem.
 # Em uma das pontas está a estudante que vai parcelar o intercâmbio em 2 anos e meio.
 # A dona da mochila Amarela está em algum lugar à esquerda de quem vai fazer um intercâmbio de 6 meses.
 # Fabiana é a estudante mais velha.
