@@ -11,32 +11,142 @@ resolve(S) :-
 
 % A estudante de mochila Verde está ao lado da estudante de 30 anos.
 
-            ao_lado(C,D,E,S),
+            ao_lado(C,D,S),
             mochila(C,verde),
             idade(D,trinta),
 
 % A dona da mochila Azul está em algum lugar entre a Bruna e a estudante de 24 anos, nessa ordem.
+
+            algum_lugar_entre(A,B,F,S),
+            mochila(A,azul),
+            nome(B,bruna),
+            idade(F,vinte_quatro),
+
 % Em uma das pontas está a estudante que vai parcelar o intercâmbio em 2 anos e meio.
+
+            uma_das_pontas(E,S),
+            parcelas(E, trinta),
+
 % A dona da mochila Amarela está em algum lugar à esquerda de quem vai fazer um intercâmbio de 6 meses.
-% Fabiana é a estudante mais velha.
+
+            algum_lugar_a_esquerda(G,H,S),
+            mochila(G,amarela),
+            duracao(H,seis_meses),
+
 % Luiza está exatamente à esquerda da estudante de 24 anos.
+
+            exatamente_a_esquerda(I,J,S),
+            nome(I,luiza),
+            idade(J,vinte_quatro),
+
 % Quem vai para o Canadá está em algum lugar à direita de quem tem a mochila Verde
+
+            algum_lugar_a_direita(K,L,S),
+            pais(K,canada),
+            mochila(L,verde),
+
 % A estudante que vai para a Austrália está exatamente à esquerda da estudante de mochila Amarela.
+
+            exatamente_a_esquerda(M,N,S),
+            pais(M,australia),
+            mochila(N,amarela),
+
 % A dona da mochila Azul está ao lado de quem vai pagar o intercâmbio em 24 parcelas.
+
+            ao_lado(O,P,S),
+            mochila(O,azul),
+            parcelas(P,vinte_quatro),
+
 % Quem vai fazer um intercâmbio de 15 meses está em algum lugar à direita da estudante de mochila Verde
-% A estudante mais nova está na segunda posição.
+
+            algum_lugar_a_direita(Q,R,S),
+            duracao(Q,quinze_meses),
+            mochila(R,verde),
+
 % A estudante de mochila Azul está exatamente à esquerda da estudante que vai fazer um intercâmbio de 18 meses.
-% Quem vai para a Inglaterra vai parcelar o intercâmbio em 30 vezes.
+
+            exatamente_a_esquerda(T,U,S),
+            mochila(T,azul),
+            duracao(U,dezoito_meses),
+
 % A dona da mochila Verde está ao lado de quem vai parcelar os gastos em 1 ano e meio.
-% A estudante que vai fazer um intercâmbio de 9 meses está com a mochila Branca.
+
+            ao_lado(V,W,S),
+            mochila(V,verde),
+            parcelas(W,dezoito),
+
 % Em uma das pontas está a estudante que vai parcelar o intercâmbio em 6 parcelas.
+
+            uma_das_pontas(Y,S),
+            parcelas(Y,seis),
+
 % A estudante de 33 anos está em algum lugar à direita da estudante de mochila Verde.
-% Quem vai fazer um intercâmbio de 1 ano está na segunda posição.
+
+            algum_lugar_a_direita(Z,A1,S),
+            idade(Z,trinta_e_tres),
+            mochila(A1,verde),
+            
 % A estudante de mochila Azul está em algum lugar à esquerda de quem vai pagar o intercâmbio em 18 vezes.
+
+            algum_lugar_a_esquerda(B1,C1,S),
+            mochila(B1,azul),
+            parcelas(C1,dezoito),
+
 % Quem vai para a Irlanda está em algum lugar entre quem vai para os Estados Unidos e quem vai para a Austrália, nessa ordem.
+
+            algum_lugar_entre(D1,E1,F1,S),
+            pais(D1,irlanda),
+            pais(E1,eua),
+            pais(F1,australia),
+
 % Emily está exatamente à direita da estudante de mochila Verde.
+
+            exatamente_a_direita(G1,H1,S),
+            nome(G1,emily),
+            mochila(H1,verde),
+
+% A estudante mais nova está na segunda posição.
+
+            segunda_posicao(I1,S),
+            idade(I1,vinte_um),
+
+
+% Fabiana é a estudante mais velha.
+
+            pessoa(J1,S),
+            nome(J1,fabiana),
+            idade(J1,trinta_e_tres),
+
+% Quem vai para a Inglaterra vai parcelar o intercâmbio em 30 vezes.
+
+            pessoa(K1,S),
+            pais(K1,inglaterra),
+            parcelas(K1, trinta),
+
+% A estudante que vai fazer um intercâmbio de 9 meses está com a mochila Branca.
+
+            pessoa(L1,S),
+            duracao(L1,nove_meses),
+            mochila(L1,branca),
+
+% Quem vai fazer um intercâmbio de 1 ano está na segunda posição.
+
+            segunda_posicao(M1,S),
+            duracao(M1,um_ano),
+
 % Restrições de fechamento.
-.
+
+            pessoa(N1,S),
+            mochila(N1,vermelha),
+
+            pessoa(O1,S),
+            nome(O1,talita),
+
+            pessoa(P1,S),
+            parcelas(P1,doze),
+
+            pessoa(R1,S),
+            idade(R1,vinte_sete).
 
 
 pessoa(X,sala(X,_,_,_,_)).
@@ -106,3 +216,5 @@ ao_lado(X,Y,sala(_,_,X,Y,_)).
 ao_lado(X,Y,sala(_,_,Y,X,_)).
 ao_lado(X,Y,sala(_,_,_,X,Y)).
 ao_lado(X,Y,sala(_,_,_,Y,X)).
+
+segunda_posicao(X,sala(_,X,_,_,_)).
