@@ -1,6 +1,6 @@
-# Autor : João Barboza Rodrigues
-# Data : 10/11/2020
-# https://rachacuca.com.br/logica/problemas/feira-de-intercambio/
+% Autor : João Barboza Rodrigues
+% Data : 10/11/2020
+% https://rachacuca.com.br/logica/problemas/feira-de-intercambio/
 
 resolve(S) :-
            S = sala(estudante(_,_,_,_,_,_),
@@ -16,26 +16,26 @@ resolve(S) :-
             idade(D,trinta),
 
 % A dona da mochila Azul está em algum lugar entre a Bruna e a estudante de 24 anos, nessa ordem.
-# Em uma das pontas está a estudante que vai parcelar o intercâmbio em 2 anos e meio.
-# A dona da mochila Amarela está em algum lugar à esquerda de quem vai fazer um intercâmbio de 6 meses.
-# Fabiana é a estudante mais velha.
-# Luiza está exatamente à esquerda da estudante de 24 anos.
-# Quem vai para o Canadá está em algum lugar à direita de quem tem a mochila Verde
-# A estudante que vai para a Austrália está exatamente à esquerda da estudante de mochila Amarela.
-# A dona da mochila Azul está ao lado de quem vai pagar o intercâmbio em 24 parcelas.
-# Quem vai fazer um intercâmbio de 15 meses está em algum lugar à direita da estudante de mochila Verde
-# A estudante mais nova está na segunda posição.
-# A estudante de mochila Azul está exatamente à esquerda da estudante que vai fazer um intercâmbio de 18 meses.
-# Quem vai para a Inglaterra vai parcelar o intercâmbio em 30 vezes.
-# A dona da mochila Verde está ao lado de quem vai parcelar os gastos em 1 ano e meio.
-# A estudante que vai fazer um intercâmbio de 9 meses está com a mochila Branca.
-# Em uma das pontas está a estudante que vai parcelar o intercâmbio em 6 parcelas.
-# A estudante de 33 anos está em algum lugar à direita da estudante de mochila Verde.
-# Quem vai fazer um intercâmbio de 1 ano está na segunda posição.
-# A estudante de mochila Azul está em algum lugar à esquerda de quem vai pagar o intercâmbio em 18 vezes.
-# Quem vai para a Irlanda está em algum lugar entre quem vai para os Estados Unidos e quem vai para a Austrália, nessa ordem.
-# Emily está exatamente à direita da estudante de mochila Verde.
-# Restrições de fechamento.
+% Em uma das pontas está a estudante que vai parcelar o intercâmbio em 2 anos e meio.
+% A dona da mochila Amarela está em algum lugar à esquerda de quem vai fazer um intercâmbio de 6 meses.
+% Fabiana é a estudante mais velha.
+% Luiza está exatamente à esquerda da estudante de 24 anos.
+% Quem vai para o Canadá está em algum lugar à direita de quem tem a mochila Verde
+% A estudante que vai para a Austrália está exatamente à esquerda da estudante de mochila Amarela.
+% A dona da mochila Azul está ao lado de quem vai pagar o intercâmbio em 24 parcelas.
+% Quem vai fazer um intercâmbio de 15 meses está em algum lugar à direita da estudante de mochila Verde
+% A estudante mais nova está na segunda posição.
+% A estudante de mochila Azul está exatamente à esquerda da estudante que vai fazer um intercâmbio de 18 meses.
+% Quem vai para a Inglaterra vai parcelar o intercâmbio em 30 vezes.
+% A dona da mochila Verde está ao lado de quem vai parcelar os gastos em 1 ano e meio.
+% A estudante que vai fazer um intercâmbio de 9 meses está com a mochila Branca.
+% Em uma das pontas está a estudante que vai parcelar o intercâmbio em 6 parcelas.
+% A estudante de 33 anos está em algum lugar à direita da estudante de mochila Verde.
+% Quem vai fazer um intercâmbio de 1 ano está na segunda posição.
+% A estudante de mochila Azul está em algum lugar à esquerda de quem vai pagar o intercâmbio em 18 vezes.
+% Quem vai para a Irlanda está em algum lugar entre quem vai para os Estados Unidos e quem vai para a Austrália, nessa ordem.
+% Emily está exatamente à direita da estudante de mochila Verde.
+% Restrições de fechamento.
 .
 
 
